@@ -4,6 +4,8 @@ package PlaySongDemo;
  * This code will play any song assuming that file is in folder songfiles. 
  * 
  * Programmer Rick Mercer
+ * 
+ * Name: Tony Zhang -> For Gitting Github assignment, added name
  */
 import java.io.File;
 import java.net.URI;
@@ -25,10 +27,17 @@ public class PlayAnMP3 extends Application {
 
   private int songsPlayed = 0;
 
+  /**
+   * Solved issue of Error: Could not find or load main class Files.javafx-sdk-19.0.2.1.lib
+   * Caused by: java.lang.ClassNotFoundException: Files.javafx-sdk-19.0.2.1.lib
+   * 
+   * Fixing Issue: added quotes in build path
+   */
+  
   @Override
   public void start(Stage stage) throws Exception {
     BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
+    String path = "songfiles/SwingCheese.mp3";
     pane.setCenter( new Label(path));
     playASong(path);
     // Put the pane in a sized Scene and show the GUI
